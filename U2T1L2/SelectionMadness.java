@@ -25,7 +25,37 @@ public class SelectionMadness {
   /* Returns the largest of three provided integers: num1, num2, or num3
    */
   public int largest(int num1, int num2, int num3) {
-     return 0;
+     if (num1 > num2 && num1 > num3){
+         return num1;
+     }
+     else if (num2 > num3){
+         return num2;
+     }
+     else {
+      return num3;
+     }
   }
-
+public boolean rightTriangle(int side1, int side2, int side3) {
+        if (side3>side2&&side3>side1){
+            if (Math.pow(side1,2)+Math.pow(side2,2)==Math.pow(side3,2)){
+                return true;
+            } else {
+                return false;
+            }
+        }
+        else if (side2>side1&&side2>side3){
+            if (Math.pow(side1,2)+Math.pow(side3,2)==Math.pow(side2,2)){
+                return true;
+            } else {
+                return false;
+            }
+        }
+        else{
+            if (Math.pow(side2,2)+Math.pow(side3,2)==Math.pow(side1,2)){
+                return true;
+            } else {
+                return false;
+            }
+        }
+  }
 }
